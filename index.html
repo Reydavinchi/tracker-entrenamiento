@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101713">
+  <title>Mi tracker · Entrenamiento</title>
+  <style>
+    :root{--bg:#101713;--panel:#19231e;--panel2:#202d26;--line:#33443a;--text:#f1f5f1;--muted:#a5b4a9;--green:#a8ef80;--green2:#23412e;--amber:#f5c66d;--red:#ff927f;--radius:18px;--shadow:0 14px 40px #0003}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% -10%,#254331 0,transparent 35%),var(--bg);color:var(--text);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}button,input,select{font:inherit}button{cursor:pointer;color:inherit}a{color:var(--green)}.wrap{max-width:1120px;margin:0 auto;padding:26px 20px 56px}.top{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:22px}.brand{display:flex;align-items:center;gap:13px}.logo{display:grid;place-items:center;width:46px;height:46px;background:var(--green);color:#102016;border-radius:14px;font-size:22px;font-weight:900}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-size:11px;font-weight:800;color:var(--green)}h1{font-size:clamp(25px,4vw,38px);line-height:1.1;margin:3px 0 0;letter-spacing:-.035em}.topnote{color:var(--muted);font-size:13px;text-align:right}.layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:20px;align-items:start}.main,.side{min-width:0}.hero,.card,.side-card{background:linear-gradient(150deg,#1b2720,#17201b);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}.hero{padding:19px 20px;margin-bottom:15px;display:flex;justify-content:space-between;gap:18px;align-items:center}.hero h2{margin:0 0 3px;font-size:18px}.hero p{margin:0;color:var(--muted);font-size:13px}.day-pill{border:1px solid #48644f;background:#23382a;color:var(--green);border-radius:999px;padding:7px 12px;font-weight:750;font-size:12px;white-space:nowrap}.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}.tab{background:#18211c;border:1px solid var(--line);border-radius:13px;padding:11px 8px;text-align:center;font-weight:750;color:var(--muted);transition:.15s}.tab:hover{border-color:#76927b;color:var(--text)}.tab.active{background:var(--green);border-color:var(--green);color:#132019}.tab small{display:block;font-weight:550;font-size:11px;opacity:.8}.card{padding:18px;margin-bottom:13px}.section-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:11px}.section-head h3{margin:0;font-size:17px}.section-head p{color:var(--muted);margin:2px 0 0;font-size:12px}.count{color:var(--muted);font-size:12px;white-space:nowrap}.meta-controls{display:flex;align-items:center;gap:12px}.date-box{font-size:10px;color:var(--muted);display:grid;gap:3px}.date-box input{background:#111a15;border:1px solid var(--line);border-radius:8px;color:var(--text);padding:5px 7px;font-size:11px}.exercise{padding:16px 0;border-top:1px solid #2d3b32}.exercise:first-of-type{border-top:0}.ex-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.ex-head h4{font-size:15px;margin:0}.ex-meta{color:var(--muted);font-size:12px;margin-top:3px}.rest-btn,.minor-btn,.outline-btn{background:#202c25;border:1px solid var(--line);border-radius:10px;padding:8px 10px;font-size:12px;font-weight:700;white-space:nowrap}.rest-btn:hover,.minor-btn:hover,.outline-btn:hover{border-color:#819787}.sets{display:grid;gap:7px;margin-top:12px}.set-row{display:grid;grid-template-columns:58px 1fr 1fr 92px;gap:8px;align-items:center}.set-label{color:var(--muted);font-size:12px;font-weight:700}.field{position:relative}.field label{position:absolute;top:3px;left:9px;color:#96a69a;font-size:9px;line-height:1}.field input{width:100%;padding:17px 9px 5px;background:#111a15;color:var(--text);border:1px solid #35463a;border-radius:9px;outline:0;min-width:0}.field input:focus{border-color:var(--green);box-shadow:0 0 0 2px #a8ef8020}.previous{color:#9db2a2;font-size:11px;margin-top:8px}.exercise-note{color:#c1cec4;font-size:12px;margin-top:7px}.session-actions{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:16px 0 10px}.save-btn{background:var(--green);border:0;color:#102016;border-radius:12px;padding:12px 16px;font-weight:850}.save-btn:hover{filter:brightness(1.06)}.save-btn:disabled{opacity:.45;cursor:not-allowed}.status{font-size:12px;color:var(--muted)}.side-card{padding:17px;margin-bottom:14px}.side-card h3{margin:0 0 10px;font-size:15px}.timerbox{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#111a15;border:1px solid var(--line);border-radius:14px;padding:12px}.timer{font-variant-numeric:tabular-nums;font-weight:850;font-size:28px;letter-spacing:.04em}.timer-buttons{display:flex;gap:6px}.timer-buttons button{background:#26352b;border:1px solid #425347;border-radius:9px;padding:7px 9px;font-size:12px}.timer-buttons .stop{color:var(--amber)}.tip{padding:10px 11px;background:#17241b;border-left:3px solid var(--green);border-radius:5px 10px 10px 5px;color:#c4d0c7;font-size:12px;margin-top:11px}.tip strong{color:var(--text)}.history-item{padding:11px 0;border-top:1px solid #2d3b32}.history-item:first-of-type{border-top:0}.history-head{display:flex;justify-content:space-between;align-items:center;gap:10px}.history-head strong{font-size:13px}.history-head span{font-size:11px;color:var(--muted)}.history-item details{margin-top:5px;color:var(--muted);font-size:12px}.history-item summary{cursor:pointer}.history-item ul{margin:7px 0 0;padding-left:18px}.delete{border:0;background:transparent;color:#bd928b;font-size:11px;padding:3px}.backup-row{display:grid;gap:8px}.backup-row button{width:100%}.backup-row input{display:none}.home-core{border-color:#6b5833;background:linear-gradient(145deg,#2a261c,#1d211c)}.core-days{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0}.core-days label{background:#302c20;border:1px solid #685b37;border-radius:999px;padding:5px 9px;font-size:11px}.core-info{font-size:12px;color:#d2cbb9}.foot{font-size:11px;color:#829188;text-align:center;margin-top:18px}.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);padding:11px 16px;background:var(--green);color:#142018;border-radius:11px;font-weight:800;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:.2s;z-index:5}.toast.show{opacity:1;transform:translate(-50%,0)}.empty{color:var(--muted);font-size:13px;padding:8px 0}.danger-link{color:#bd928b;background:none;border:0;font-size:12px;text-decoration:underline;padding:7px 0}
+    @media(max-width:850px){.layout{grid-template-columns:1fr}.side{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.side-card{margin:0}.side-card.history{grid-column:1/-1}}
+    @media(max-width:560px){.wrap{padding:18px 12px 40px}.top{align-items:flex-start}.topnote{display:none}.hero{align-items:flex-start;flex-direction:column}.tabs{gap:5px}.tab{font-size:12px;padding:9px 4px}.tab small{font-size:10px}.card{padding:14px}.set-row{grid-template-columns:46px 1fr 1fr 76px;gap:5px}.rest-btn{font-size:10px;padding:7px 8px}.side{grid-template-columns:1fr}.side-card.history{grid-column:auto}.session-actions{align-items:flex-start;flex-direction:column}.save-btn{width:100%}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <div class="brand"><div class="logo">A</div><div><div class="eyebrow">Tu entrenamiento</div><h1>Tracker de 4 días</h1></div></div>
+      <div class="topnote">Martes · Miércoles · Jueves · Sábado<br>Registro privado en este navegador</div>
+    </header>
+    <div class="layout">
+      <main class="main">
+        <section class="hero"><div><h2 id="dayTitle">Pecho · Espalda · Tríceps</h2><p id="daySubtitle">Sesión A · Mañana, alrededor de las 10:30</p></div><span class="day-pill" id="dayBadge">MARTES</span></section>
+        <nav class="tabs" id="tabs" aria-label="Días de entrenamiento"></nav>
+        <section class="card">
+          <div class="section-head"><div><h3>Ejercicios y registro</h3><p>Apunta carga y repeticiones de cada serie. Peso en kg.</p></div><div class="meta-controls"><span class="count" id="progress">0 ejercicios registrados</span><label class="date-box">Fecha<input id="sessionDate" type="date"></label></div></div>
+          <div id="exerciseList"></div>
+          <div class="session-actions"><span class="status" id="draftStatus">El registro se guarda automáticamente como borrador.</span><button class="save-btn" id="saveWorkout" disabled>Guardar sesión</button></div>
+        </section>
+        <section class="card home-core">
+          <div class="section-head"><div><h3>Abdomen en casa · rueda</h3><p>Dos veces por semana; puedes hacerlo después del gimnasio el martes y el jueves.</p></div><span class="day-pill" style="color:#f5c66d;border-color:#6b5833;background:#302c20">OPCIONAL</span></div>
+          <div class="core-info"><strong>Rueda abdominal:</strong> 2–3 series de 6–10 repeticiones controladas. Mantén costillas hacia abajo y evita arquear la zona lumbar; acorta el recorrido si pierdes la postura. Deja 1–2 repeticiones posibles.</div>
+          <div class="core-days"><label>Ejemplo: martes en casa</label><label>jueves en casa</label></div>
+          <div class="core-info">Aumenta el recorrido poco a poco antes de añadir repeticiones. Procura llegar sin fatiga abdominal a las sentadillas o al peso muerto rumano; para si aparece dolor.</div>
+        </section>
+      </main>
+      <aside class="side">
+        <section class="side-card">
+          <h3>Descanso entre series</h3>
+          <div class="timerbox"><div><div class="eyebrow">Temporizador</div><div class="timer" id="timerDisplay">02:00</div></div><div class="timer-buttons"><button id="timerStart">Iniciar</button><button class="stop" id="timerStop">Parar</button></div></div>
+          <div class="timer-buttons" style="margin-top:8px"><button data-timer="90">90 s</button><button data-timer="120">2 min</button><button data-timer="150">2:30</button></div>
+          <div class="tip"><strong>Descanso:</strong> usa 2–3 min en ejercicios grandes y 1–2 min en aislamientos. Prioriza mantener buenas repeticiones.</div>
+        </section>
+        <section class="side-card">
+          <h3>Progresión sencilla</h3>
+          <div class="tip" style="margin-top:0"><strong>Rango doble:</strong> conserva la carga hasta alcanzar el extremo alto del rango en todas las series con técnica limpia y 1–3 repeticiones en reserva. Luego sube al incremento más pequeño y vuelve al extremo bajo.</div>
+          <div class="tip"><strong>Esfuerzo:</strong> no necesitas hacer todas las series al fallo ni añadir parciales o excéntricas forzadas. Deja normalmente 1–3 repeticiones en reserva.</div>
+        </section>
+        <section class="side-card history">
+          <div class="section-head"><h3>Historial guardado</h3><button class="minor-btn" id="exportBtn">Respaldo</button></div>
+          <div id="historyList"></div>
+        </section>
+        <section class="side-card">
+          <h3>Guardar y recuperar tus datos</h3>
+          <div class="backup-row"><button class="outline-btn" id="importBtn">Importar respaldo</button><input type="file" id="importFile" accept="application/json,.json"><span class="status">Los datos quedan en este navegador y dispositivo. Descarga un respaldo antes de cambiar de equipo o borrar datos del navegador.</span></div>
+          <div class="tip"><strong>Suplementos:</strong> usa proteína en polvo para completar tu objetivo diario si te hace falta. Registra la creatina según la pauta que hayas decidido con un profesional; el tracker no fija dosis.</div>
+        </section>
+      </aside>
+    </div>
+    <p class="foot">Esta página funciona sin cuenta y no envía tus registros a ningún servicio. Usa el mismo navegador para conservar el historial.</p>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+(()=>{
+  'use strict';
+  const STORE='alessandro_tracker_4dias_v1';
+  const days=[
+    {id:'tue',name:'Martes',title:'Pecho · Espalda · Tríceps',subtitle:'Sesión A · Mañana, alrededor de las 10:30',exercises:[
+      {id:'incline_db',name:'Press inclinado con mancuernas',sets:3,min:6,max:10,rest:120,type:'Compuesto',note:'Controla el descenso y mantén los hombros estables.'},
+      {id:'cable_row_a',name:'Remo sentado en cable',sets:3,min:8,max:12,rest:120,type:'Compuesto',note:'Agarre cómodo; lleva los codos hacia atrás sin balancear el torso.'},
+      {id:'flat_db',name:'Press plano con mancuernas',sets:2,min:8,max:12,rest:120,type:'Compuesto',note:'Recorrido que puedas controlar sin dolor.'},
+      {id:'lat_close',name:'Jalón al pecho, agarre estrecho',sets:3,min:8,max:12,rest:120,type:'Compuesto',note:'Lleva los codos hacia abajo; evita tirar detrás de la nuca.'},
+      {id:'crossover_a',name:'Cruce de poleas',sets:2,min:10,max:15,rest:120,type:'Aislamiento',note:'Mantén una ligera flexión del codo y controla el estiramiento.'},
+      {id:'pushdown_a',name:'Extensión de tríceps con cuerda',sets:2,min:10,max:15,rest:120,type:'Aislamiento',note:'Codos quietos, sin impulso.'},
+      {id:'overhead_tri_a',name:'Extensión de tríceps sobre la cabeza en polea',sets:2,min:10,max:15,rest:120,type:'Aislamiento',note:'Usa un recorrido cómodo y estable.'}
+    ]},
+    {id:'wed',name:'Miércoles',title:'Pierna · Hombro · Bíceps',subtitle:'Sesión A · Mañana, alrededor de las 10:30',exercises:[
+      {id:'squat',name:'Sentadilla con barra',sets:3,min:6,max:10,rest:120,type:'Compuesto',note:'Calienta con series progresivas; no cuentes el calentamiento como serie efectiva.'},
+      {id:'reverse_lunge',name:'Zancada hacia atrás',sets:2,min:8,max:12,rest:120,type:'Compuesto',note:'Repeticiones por pierna; usa apoyo si mejora el equilibrio.'},
+      {id:'seated_curl_a',name:'Curl femoral sentado',sets:3,min:10,max:15,rest:120,type:'Aislamiento',note:'Controla ambas fases; evita forzar excéntricas.'},
+      {id:'calf_a',name:'Elevación de pantorrillas de pie',sets:3,min:10,max:15,rest:120,type:'Aislamiento',note:'Haz una pausa breve arriba y abajo.'},
+      {id:'shoulder_press',name:'Press de hombro con mancuernas',sets:3,min:6,max:10,rest:120,type:'Compuesto',note:'Evita arquear la espalda para completar la repetición.'},
+      {id:'lateral_a',name:'Elevación lateral',sets:3,min:12,max:20,rest:120,type:'Aislamiento',note:'Sube con control; no hacen falta parciales.'},
+      {id:'ez_curl',name:'Curl de bíceps con barra Z',sets:3,min:8,max:12,rest:120,type:'Aislamiento',note:'Mantén el torso quieto y baja con control.'},
+      {id:'hammer_a',name:'Curl martillo cruzado',sets:2,min:10,max:15,rest:120,type:'Aislamiento',note:'Repeticiones por brazo, sin balanceo.'}
+    ]},
+    {id:'thu',name:'Jueves',title:'Pecho · Espalda · Tríceps',subtitle:'Sesión B · Mañana, alrededor de las 10:30',exercises:[
+      {id:'flat_db_b',name:'Press plano con mancuernas',sets:3,min:6,max:10,rest:120,type:'Compuesto',note:'Controla el descenso y mantén los hombros estables.'},
+      {id:'row_wide_b',name:'Remo sentado en cable, agarre ancho',sets:3,min:8,max:12,rest:120,type:'Compuesto',note:'Tira hacia el torso sin encoger los hombros.'},
+      {id:'incline_db_b',name:'Press inclinado con mancuernas',sets:2,min:8,max:12,rest:120,type:'Compuesto',note:'Deja varias repeticiones posibles; sin rebotes.'},
+      {id:'lat_wide_b',name:'Jalón al pecho, agarre cómodo',sets:3,min:8,max:12,rest:120,type:'Compuesto',note:'Lleva los codos hacia abajo, sin balancear el cuerpo.'},
+      {id:'crossover_b',name:'Cruce de poleas',sets:2,min:10,max:15,rest:120,type:'Aislamiento',note:'Mantén tensión sin golpear las manos al cerrar.'},
+      {id:'pushdown_b',name:'Extensión de tríceps con cuerda',sets:2,min:10,max:15,rest:120,type:'Aislamiento',note:'Codos junto al cuerpo.'},
+      {id:'lying_tri_b',name:'Extensión de tríceps tumbado con mancuernas',sets:2,min:10,max:15,rest:120,type:'Aislamiento',note:'Baja hasta un rango cómodo; evita forzar el codo.'}
+    ]},
+    {id:'sat',name:'Sábado',title:'Pierna · Hombro · Bíceps',subtitle:'Sesión B · Tarde',exercises:[
+      {id:'leg_press',name:'Prensa de piernas',sets:3,min:8,max:12,rest:120,type:'Compuesto',note:'Mantén la espalda apoyada y usa un recorrido controlado.'},
+      {id:'db_rdl',name:'Peso muerto rumano con mancuernas',sets:3,min:8,max:12,rest:120,type:'Compuesto',note:'Lleva la cadera atrás; mantén la espalda neutra y el peso cerca.'},
+      {id:'leg_ext',name:'Extensión de piernas',sets:2,min:10,max:15,rest:120,type:'Aislamiento',note:'Sube y baja de forma controlada.'},
+      {id:'seated_curl_b',name:'Curl femoral sentado',sets:2,min:10,max:15,rest:120,type:'Aislamiento',note:'No rebotes al final del recorrido.'},
+      {id:'calf_b',name:'Elevación de pantorrillas',sets:3,min:10,max:15,rest:120,type:'Aislamiento',note:'Pausa breve en el estiramiento y arriba.'},
+      {id:'lateral_b',name:'Elevación lateral',sets:3,min:12,max:20,rest:120,type:'Aislamiento',note:'Usa una carga que no te obligue a balancearte.'},
+      {id:'rear_delt_b',name:'Apertura para deltoides posteriores en polea o máquina',sets:3,min:12,max:20,rest:120,type:'Aislamiento',note:'Abre los brazos sin encoger los hombros.'},
+      {id:'cable_curl_b',name:'Curl de bíceps en polea o banco predicador',sets:3,min:8,max:12,rest:120,type:'Aislamiento',note:'Repeticiones limpias; no añadas impulso.'},
+      {id:'hammer_b',name:'Curl martillo',sets:2,min:10,max:15,rest:120,type:'Aislamiento',note:'Mantén muñeca neutra y controla el descenso.'}
+    ]}
+  ];
+  const $=s=>document.querySelector(s),today=()=>{const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`};
+  let active=0,timerLeft=120,timerId=null,toastId=null;
+  let state=readState();
+  function readState(){try{const x=JSON.parse(localStorage.getItem(STORE)||'{}');return {drafts:x.drafts||{},history:Array.isArray(x.history)?x.history:[]}}catch(e){return {drafts:{},history:[]}}}
+  function persist(){try{localStorage.setItem(STORE,JSON.stringify(state));$('#draftStatus').textContent='Borrador guardado automáticamente en este navegador.'}catch(e){$('#draftStatus').textContent='No se pudo guardar: descarga un respaldo y libera espacio del navegador.'}}
+  function toast(s){const t=$('#toast');t.textContent=s;t.classList.add('show');clearTimeout(toastId);toastId=setTimeout(()=>t.classList.remove('show'),2600)}
+  function currentDay(){return days[active]}
+  function getDraft(){return state.drafts[currentDay().id]||{date:today(),entries:{}}}
+  function lastFor(exId){for(const h of state.history){const found=(h.entries||[]).find(e=>e.id===exId);if(found)return found}return null}
+  function renderTabs(){const el=$('#tabs');el.innerHTML='';days.forEach((d,i)=>{const b=document.createElement('button');b.className='tab'+(i===active?' active':'');b.innerHTML=`${d.name}<small>${i===0||i===2?'Pecho + espalda':'Pierna + hombro'}</small>`;b.onclick=()=>{active=i;render()};el.appendChild(b)})}
+  function render(){const d=currentDay(),draft=getDraft();$('#dayTitle').textContent=d.title;$('#daySubtitle').textContent=d.subtitle;$('#dayBadge').textContent=d.name.toUpperCase();renderTabs();const list=$('#exerciseList');list.innerHTML='';
+    for(const ex of d.exercises){const saved=draft.entries[ex.id]||{};const prev=lastFor(ex.id);const article=document.createElement('article');article.className='exercise';
+      const head=document.createElement('div');head.className='ex-head';head.innerHTML=`<div><h4>${ex.name}</h4><div class="ex-meta">${ex.sets} series · ${ex.min}–${ex.max} reps · ${ex.type}</div></div><button class="rest-btn" data-rest="${ex.rest}">Descanso ${ex.rest>=120?Math.floor(ex.rest/60)+':'+String(ex.rest%60).padStart(2,'0'):ex.rest+' s'}</button>`;article.appendChild(head);
+      const sets=document.createElement('div');sets.className='sets';for(let n=0;n<ex.sets;n++){const v=(saved.sets||[])[n]||{},prior=(prev?.sets||[])[n]||{};const row=document.createElement('div');row.className='set-row';row.innerHTML=`<span class="set-label">Serie ${n+1}</span><div class="field"><label for="w_${ex.id}_${n}">Carga · kg</label><input inputmode="decimal" type="number" min="0" step="0.25" id="w_${ex.id}_${n}" data-ex="${ex.id}" data-set="${n}" data-field="weight" value="${v.weight??prior.weight??''}" aria-label="${ex.name}, serie ${n+1}, carga en kilos"></div><div class="field"><label for="r_${ex.id}_${n}">Repeticiones</label><input inputmode="numeric" type="number" min="0" step="1" id="r_${ex.id}_${n}" data-ex="${ex.id}" data-set="${n}" data-field="reps" value="${v.reps??''}" aria-label="${ex.name}, serie ${n+1}, repeticiones"></div><div class="field"><label for="rir_${ex.id}_${n}">RIR opcional</label><input inputmode="numeric" type="number" min="0" max="10" step="1" id="rir_${ex.id}_${n}" data-ex="${ex.id}" data-set="${n}" data-field="rir" value="${v.rir??''}" aria-label="${ex.name}, serie ${n+1}, repeticiones en reserva"></div>`;sets.appendChild(row)}article.appendChild(sets);
+      if(prev){const reps=(prev.sets||[]).map(s=>s?.reps||'–').join('/');const weight=(prev.sets||[]).find(s=>s&&s.weight!==''&&s.weight!=null)?.weight;const p=document.createElement('div');p.className='previous';p.textContent=`Última sesión guardada: ${weight!==undefined?weight+' kg · ':''}${reps} reps`;article.appendChild(p)}
+      const note=document.createElement('div');note.className='exercise-note';note.textContent=ex.note;article.appendChild(note);list.appendChild(article)
+    }
+    list.querySelectorAll('[data-rest]').forEach(b=>b.onclick=()=>startTimer(Number(b.dataset.rest)));
+    list.querySelectorAll('input').forEach(inp=>inp.oninput=()=>{const exId=inp.dataset.ex,idx=Number(inp.dataset.set),field=inp.dataset.field;const draft=getDraft();draft.date=$('#sessionDate').value||today();draft.entries[exId]??={id:exId,name:d.exercises.find(e=>e.id===exId).name,sets:[]};draft.entries[exId].sets??=[];draft.entries[exId].sets[idx]??={weight:'',reps:'',rir:''};draft.entries[exId].sets[idx][field]=inp.value;state.drafts[d.id]=draft;persist();updateProgress()});
+    $('#sessionDate').value=draft.date||today();$('#sessionDate').onchange=()=>{const x=getDraft();x.date=$('#sessionDate').value;state.drafts[d.id]=x;persist()};updateProgress();renderHistory()
+  }
+  function updateProgress(){const d=currentDay(),draft=getDraft();const n=Object.values(draft.entries).filter(e=>(e.sets||[]).some(s=>s.reps!==''&&s.reps!=null)).length;$('#progress').textContent=`${n} de ${d.exercises.length} ejercicios registrados`;
+    const has=Object.values(draft.entries).some(e=>(e.sets||[]).some(s=>(s.reps!==''&&s.reps!=null)||(s.weight!==''&&s.weight!=null)));$('#saveWorkout').disabled=!has;
+  }
+  function saveWorkout(){const d=currentDay(),draft=getDraft();const entries=d.exercises.map(ex=>draft.entries[ex.id]).filter(e=>e&&(e.sets||[]).some(s=>s.reps!==''&&s.reps!=null||s.weight!==''&&s.weight!=null)).map(e=>({id:e.id,name:e.name,sets:Array.from({length:e.sets.length},(_,i)=>({...((e.sets||[])[i]||{})}))}));if(!entries.length)return;const record={id:crypto.randomUUID?crypto.randomUUID():String(Date.now()),dayId:d.id,day:d.name,title:d.title,date:draft.date||today(),savedAt:new Date().toISOString(),entries};state.history.unshift(record);state.drafts[d.id]={date:today(),entries:{}};persist();render();toast('Sesión guardada en este navegador.');}
+  function renderHistory(){const el=$('#historyList');el.innerHTML='';const hist=state.history.slice(0,8);if(!hist.length){el.innerHTML='<div class="empty">Aún no hay sesiones guardadas.</div>';return}for(const h of hist){const item=document.createElement('div');item.className='history-item';const num=(h.entries||[]).length;item.innerHTML=`<div class="history-head"><div><strong>${h.day}</strong><br><span>${h.date} · ${num} ejercicios con registro</span></div><button class="delete" data-delete="${h.id}">Borrar</button></div><details><summary>Ver ejercicios</summary><ul>${(h.entries||[]).map(e=>`<li>${escapeHtml(e.name)}: ${(e.sets||[]).map(s=>`${s.weight||'—'} kg × ${s.reps||'—'}`).join(', ')}</li>`).join('')}</ul></details>`;el.appendChild(item)}el.querySelectorAll('[data-delete]').forEach(b=>b.onclick=()=>{if(confirm('¿Borrar esta sesión del historial?')){state.history=state.history.filter(h=>h.id!==b.dataset.delete);persist();renderHistory()}})}
+  function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+  function fmt(sec){return String(Math.floor(sec/60)).padStart(2,'0')+':'+String(sec%60).padStart(2,'0')}
+  function showTimer(){ $('#timerDisplay').textContent=fmt(timerLeft)}
+  function startTimer(sec){clearInterval(timerId);timerLeft=sec;showTimer();timerId=setInterval(()=>{timerLeft--;showTimer();if(timerLeft<=0){clearInterval(timerId);timerId=null;toast('Descanso terminado.');try{const C=window.AudioContext||window.webkitAudioContext;if(C){const c=new C(),o=c.createOscillator(),g=c.createGain();o.connect(g);g.connect(c.destination);o.frequency.value=880;g.gain.value=.08;o.start();setTimeout(()=>{o.stop();c.close()},350)}}catch(e){}}},1000)}
+  $('#timerStart').onclick=()=>startTimer(timerLeft||120);$('#timerStop').onclick=()=>{clearInterval(timerId);timerId=null;timerLeft=120;showTimer()};document.querySelectorAll('[data-timer]').forEach(b=>b.onclick=()=>{clearInterval(timerId);timerId=null;timerLeft=Number(b.dataset.timer);showTimer()});$('#saveWorkout').onclick=saveWorkout;
+  $('#exportBtn').onclick=()=>{const blob=new Blob([JSON.stringify({format:'tracker-entrenamiento-4-dias',version:1,exportedAt:new Date().toISOString(),data:state},null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='respaldo-tracker-entrenamiento.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1500);toast('Respaldo descargado.')};
+  $('#importBtn').onclick=()=>$('#importFile').click();$('#importFile').onchange=async e=>{const file=e.target.files[0];if(!file)return;try{const json=JSON.parse(await file.text()),incoming=json.data||json;if(!Array.isArray(incoming.history)||!incoming.drafts||typeof incoming.drafts!=='object'||Array.isArray(incoming.drafts))throw new Error();if(!confirm('Importar respaldo reemplazará el historial y los borradores actuales. ¿Continuar?'))return;state={history:incoming.history,drafts:incoming.drafts};persist();render();toast('Respaldo importado.')}catch(err){alert('No pude leer ese respaldo. Selecciona un archivo JSON exportado desde este tracker.')}finally{e.target.value=''}};
+  const dayMap={2:0,3:1,4:2,6:3};if(dayMap[new Date().getDay()]!==undefined)active=dayMap[new Date().getDay()];render();
+})();
+</script>
+</body>
+</html>
