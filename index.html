@@ -80,16 +80,16 @@
   'use strict';
   const STORE='alessandro_tracker_4dias_v1';
   const days=[
-    {id:'tue',name:'Martes',title:'Pecho · Espalda · Tríceps',subtitle:'Sesión A · Mañana, alrededor de las 10:30',exercises:[
-      {id:'incline_db',name:'Press inclinado con mancuernas',sets:3,min:6,max:10,rest:120,type:'Compuesto',note:'Controla el descenso y mantén los hombros estables.'},
-      {id:'machine_fly_tue',name:'Aperturas en máquina',sets:3,min:8,max:12,rest:120,type:'Aislamiento',note:'Mantén los hombros apoyados y controla el estiramiento; no juntes las manos con impulso.'},
-      {id:'flat_db',name:'Press plano con mancuernas',sets:2,min:8,max:12,rest:120,type:'Compuesto',note:'Recorrido que puedas controlar sin dolor.'},
-      {id:'lat_close',name:'Jalón al pecho, agarre estrecho',sets:3,min:8,max:12,rest:120,type:'Compuesto',note:'Lleva los codos hacia abajo; evita tirar detrás de la nuca.'},
+    {id:'tue',name:'Martes',title:'Pecho · Espalda · Tríceps',subtitle:'Sesión repetida el jueves · Mañana, alrededor de las 10:30',exercises:[
+      {id:'incline_db',name:'Press inclinado con mancuernas',sets:3,min:6,max:10,rest:120,type:'Compuesto',note:'Controla el descenso y mantén los hombros estables. La máquina plate-loaded de la primera foto puede sustituirlo si su recorrido empuja en diagonal hacia arriba; si empuja horizontal, úsala en el press horizontal. Registra siempre la misma variante para comparar cargas.'},
+      {id:'flat_machine_tue',name:'Press horizontal con mancuernas o máquina',sets:2,min:8,max:12,rest:120,type:'Compuesto',note:'Usa la segunda máquina de la foto aquí solo si las manijas empujan al frente; si los brazos se abren y cierran en arco, haz este press con mancuernas. Mantén la misma variante para comparar cargas.'},
+      {id:'machine_fly_tue',name:'Aperturas en máquina',sets:3,min:8,max:12,rest:120,type:'Aislamiento',note:'Mantén los hombros apoyados y controla el estiramiento. Si la segunda máquina abre y cierra los brazos en arco, úsala para este ejercicio.'},
       {id:'lat_long_tue',name:'Jalón al pecho con agarre largo',sets:2,min:10,max:15,rest:120,type:'Compuesto',note:'Usa la barra larga con un agarre cómodo; lleva los codos hacia abajo y evita tirar detrás de la nuca.'},
-      {id:'t_bar_row_tue',name:'Remo con máquina T',sets:3,min:8,max:12,rest:120,type:'Compuesto',note:'Mantén el pecho apoyado si la máquina lo permite y lleva los codos hacia atrás sin balancearte.'},
+      {id:'t_bar_row_tue',name:'Remo con máquina T',sets:3,min:8,max:12,rest:120,type:'Compuesto',note:'Mantén el pecho apoyado si la máquina lo permite y lleva los codos hacia atrás sin balancearte; controla el movimiento para trabajar la espalda media.'},
+      {id:'straight_arm_tue',name:'Jalón de brazos rectos en polea',sets:2,min:10,max:15,rest:120,type:'Aislamiento',note:'Mantén los codos ligeramente flexionados y lleva las manos hacia los muslos; evita convertirlo en un jalón con impulso.'},
       {id:'pushdown_a',name:'Extensión de tríceps con cuerda',sets:2,min:10,max:15,rest:120,type:'Aislamiento',note:'Codos quietos, sin impulso.'},
-      {id:'overhead_tri_a',name:'Extensión de tríceps sobre la cabeza en polea',sets:2,min:10,max:15,rest:120,type:'Aislamiento',note:'Usa un recorrido cómodo y estable.'},
-      {id:'french_press_tue',name:'Press francés',sets:2,min:10,max:15,rest:120,type:'Aislamiento',note:'Mantén los codos estables y usa un recorrido sin dolor; baja con control.'}
+      {id:'french_press_tue',name:'Press francés',sets:2,min:10,max:15,rest:120,type:'Aislamiento',note:'Mantén los codos estables y usa un recorrido sin dolor; baja con control.'},
+      {id:'overhead_tri_a',name:'Extensión de tríceps sobre la cabeza en polea',sets:1,min:10,max:15,rest:120,type:'Aislamiento',note:'Una serie adicional por sesión. Mantén el brazo elevado, el recorrido cómodo y evita forzar el codo.'}
     ]},
     {id:'wed',name:'Miércoles',title:'Pierna · Hombro · Bíceps',subtitle:'Sesión A · Mañana, alrededor de las 10:30',exercises:[
       {id:'squat',name:'Sentadilla con barra',sets:3,min:6,max:10,rest:120,type:'Compuesto',note:'Calienta con series progresivas; no cuentes el calentamiento como serie efectiva.'},
@@ -101,14 +101,16 @@
       {id:'ez_curl',name:'Curl de bíceps con barra Z',sets:3,min:8,max:12,rest:120,type:'Aislamiento',note:'Mantén el torso quieto y baja con control.'},
       {id:'hammer_a',name:'Curl martillo cruzado',sets:2,min:10,max:15,rest:120,type:'Aislamiento',note:'Repeticiones por brazo, sin balanceo.'}
     ]},
-    {id:'thu',name:'Jueves',title:'Pecho · Espalda · Tríceps',subtitle:'Sesión B · Mañana, alrededor de las 10:30',exercises:[
-      {id:'flat_db_b',name:'Press plano con mancuernas',sets:3,min:6,max:10,rest:120,type:'Compuesto',note:'Controla el descenso y mantén los hombros estables.'},
-      {id:'row_wide_b',name:'Remo sentado en cable, agarre ancho',sets:3,min:8,max:12,rest:120,type:'Compuesto',note:'Tira hacia el torso sin encoger los hombros.'},
-      {id:'incline_db_b',name:'Press inclinado con mancuernas',sets:2,min:8,max:12,rest:120,type:'Compuesto',note:'Deja varias repeticiones posibles; sin rebotes.'},
-      {id:'lat_wide_b',name:'Jalón al pecho, agarre cómodo',sets:3,min:8,max:12,rest:120,type:'Compuesto',note:'Lleva los codos hacia abajo, sin balancear el cuerpo.'},
-      {id:'crossover_b',name:'Cruce de poleas',sets:2,min:10,max:15,rest:120,type:'Aislamiento',note:'Mantén tensión sin golpear las manos al cerrar.'},
-      {id:'pushdown_b',name:'Extensión de tríceps con cuerda',sets:2,min:10,max:15,rest:120,type:'Aislamiento',note:'Codos junto al cuerpo.'},
-      {id:'lying_tri_b',name:'Extensión de tríceps tumbado con mancuernas',sets:2,min:10,max:15,rest:120,type:'Aislamiento',note:'Baja hasta un rango cómodo; evita forzar el codo.'}
+    {id:'thu',name:'Jueves',title:'Pecho · Espalda · Tríceps',subtitle:'Repite la sesión del martes · Mañana, alrededor de las 10:30',exercises:[
+      {id:'incline_db',name:'Press inclinado con mancuernas',sets:3,min:6,max:10,rest:120,type:'Compuesto',note:'Controla el descenso y mantén los hombros estables. La máquina plate-loaded de la primera foto puede sustituirlo si su recorrido empuja en diagonal hacia arriba; si empuja horizontal, úsala en el press horizontal. Registra siempre la misma variante para comparar cargas.'},
+      {id:'flat_machine_tue',name:'Press horizontal con mancuernas o máquina',sets:2,min:8,max:12,rest:120,type:'Compuesto',note:'Usa la segunda máquina de la foto aquí solo si las manijas empujan al frente; si los brazos se abren y cierran en arco, haz este press con mancuernas. Mantén la misma variante para comparar cargas.'},
+      {id:'machine_fly_tue',name:'Aperturas en máquina',sets:3,min:8,max:12,rest:120,type:'Aislamiento',note:'Mantén los hombros apoyados y controla el estiramiento. Si la segunda máquina abre y cierra los brazos en arco, úsala para este ejercicio.'},
+      {id:'lat_long_tue',name:'Jalón al pecho con agarre largo',sets:2,min:10,max:15,rest:120,type:'Compuesto',note:'Usa la barra larga con un agarre cómodo; lleva los codos hacia abajo y evita tirar detrás de la nuca.'},
+      {id:'t_bar_row_tue',name:'Remo con máquina T',sets:3,min:8,max:12,rest:120,type:'Compuesto',note:'Mantén el pecho apoyado si la máquina lo permite y lleva los codos hacia atrás sin balancearte; controla el movimiento para trabajar la espalda media.'},
+      {id:'straight_arm_tue',name:'Jalón de brazos rectos en polea',sets:2,min:10,max:15,rest:120,type:'Aislamiento',note:'Mantén los codos ligeramente flexionados y lleva las manos hacia los muslos; evita convertirlo en un jalón con impulso.'},
+      {id:'pushdown_a',name:'Extensión de tríceps con cuerda',sets:2,min:10,max:15,rest:120,type:'Aislamiento',note:'Codos quietos, sin impulso.'},
+      {id:'french_press_tue',name:'Press francés',sets:2,min:10,max:15,rest:120,type:'Aislamiento',note:'Mantén los codos estables y usa un recorrido sin dolor; baja con control.'},
+      {id:'overhead_tri_a',name:'Extensión de tríceps sobre la cabeza en polea',sets:1,min:10,max:15,rest:120,type:'Aislamiento',note:'Una serie adicional por sesión. Mantén el brazo elevado, el recorrido cómodo y evita forzar el codo.'}
     ]},
     {id:'sat',name:'Sábado',title:'Pierna · Hombro · Bíceps',subtitle:'Sesión B · Tarde',exercises:[
       {id:'leg_press',name:'Prensa de piernas',sets:3,min:8,max:12,rest:120,type:'Compuesto',note:'Mantén la espalda apoyada y usa un recorrido controlado.'},
