@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101713">
+  <meta name="author" content="Alessandro Reyes">
   <title>Mi tracker · Entrenamiento</title>
   <style>
     :root{--bg:#101713;--panel:#19231e;--panel2:#202d26;--line:#33443a;--text:#f1f5f1;--muted:#a5b4a9;--green:#a8ef80;--green2:#23412e;--amber:#f5c66d;--red:#ff927f;--radius:18px;--shadow:0 14px 40px #0003}
@@ -13,12 +14,13 @@
     @media(max-width:850px){.layout{grid-template-columns:1fr}.side{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.side-card{margin:0}.side-card.history{grid-column:1/-1}}
     @media(max-width:560px){.wrap{padding:18px 12px 40px}.top{align-items:flex-start}.topnote{display:none}.hero{align-items:flex-start;flex-direction:column}.tabs{gap:5px}.tab{font-size:12px;padding:9px 4px}.tab small{font-size:10px}.card{padding:14px}.set-row{grid-template-columns:46px 1fr 1fr 76px;gap:5px}.rest-btn{font-size:10px;padding:7px 8px}.side{grid-template-columns:1fr}.side-card.history{grid-column:auto}.session-actions{align-items:flex-start;flex-direction:column}.save-btn{width:100%}}
     .exercise-guides{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}.guide-link{display:inline-flex;align-items:center;min-height:34px;padding:6px 10px;border:1px solid var(--line);border-radius:9px;background:#18241d;color:var(--green);font-size:12px;font-weight:700;text-decoration:none}.guide-link:hover,.guide-link:focus-visible{border-color:var(--green);background:#223328;outline:none}
+    .owner-watermark{display:inline-block;color:var(--green);font-size:10px;font-weight:850;letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px;opacity:.82}
   </style>
 </head>
 <body>
   <div class="wrap">
     <header class="top">
-      <div class="brand"><div class="logo">A</div><div><div class="eyebrow">Tu entrenamiento</div><h1>Tracker de 4 días</h1></div></div>
+      <div class="brand"><div class="logo" aria-label="Alessandro Reyes">A</div><div><div class="eyebrow">Alessandro Reyes</div><h1>Tracker de 4 días</h1></div></div>
       <div class="topnote">Martes · Miércoles · Jueves · Sábado<br>Registro privado en este navegador</div>
     </header>
     <div class="layout">
@@ -72,7 +74,7 @@
         </section>
       </aside>
     </div>
-    <p class="foot">Esta página funciona sin cuenta y no envía tus registros a ningún servicio. Los datos quedan en este navegador; el archivo CSV solo se crea cuando tú lo descargas.</p>
+    <p class="foot"><span class="owner-watermark">Tracker personal · Alessandro Reyes</span><br>Esta página funciona sin cuenta y no envía tus registros a ningún servicio. Los datos quedan en este navegador; el archivo CSV solo se crea cuando tú lo descargas.</p>
   </div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script>
